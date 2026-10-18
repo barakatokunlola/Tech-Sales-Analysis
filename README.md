@@ -77,6 +77,7 @@ These checks help ensure that customer regions, gender categories, and dates can
 The Power BI report contains KPI cards, charts, and interactive slicers that support exploration of the available sales data.
 ### 1. Key Performance Indicators
 The dashboard displays four main performance indicators:
+
  **• Total Revenue:** Measures sales revenue across the selected data.
  **• Total Cost:** Summarises the costs represented by the source data and the report’s measure.
  **• Profit:** Presents the profit measure used in the report.
