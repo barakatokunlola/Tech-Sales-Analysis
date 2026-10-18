@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project explores technology sales data using Microsoft Power BI to examine revenue, costs, profit, product performance, and customer characteristics. The report brings together sales, product, and customer information in an interactive dashboard. It uses KPI cards, charts, and slicers to help users explore business performance across product brands, colours, customer income levels, regions, and sales dates.
+This project explores gadgets sales data using Microsoft Power BI to examine revenue, costs, profit, product performance, and customer characteristics. The report brings together sales, product, and customer information in an interactive dashboard. It uses KPI cards, charts, and slicers to help users explore business performance across product brands, colours, customer income levels, regions, and sales dates.
 
 The project demonstrates the use of Power Query for data preparation, data modelling, DAX measures, and Power BI visualisations to transform raw data into a business reporting tool.
 
