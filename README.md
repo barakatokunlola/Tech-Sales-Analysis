@@ -79,8 +79,11 @@ The Power BI report contains KPI cards, charts, and interactive slicers that sup
 The dashboard displays four main performance indicators:
 
  **• Total Revenue:** Measures sales revenue across the selected data.
+ 
  **• Total Cost:** Summarises the costs represented by the source data and the report’s measure.
+
  **• Profit:** Presents the profit measure used in the report.
+ 
  **• Total Customers:** Displays the customer count.
 These indicators provide a high-level overview of business performance.
 
@@ -104,7 +107,9 @@ This helps users explore how profit is distributed across the income categories 
 
 ### 6. Interactive Filtering
 The dashboard includes two slicers:
+
  • Region: Filters the report by customer region.
+ 
  • Product: Filters the report by product name.
 These controls allow users to explore the report from different business perspectives without creating separate reports for each selection.
 
