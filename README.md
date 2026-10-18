@@ -50,6 +50,7 @@ Data preparation is an important part of this project because inconsistencies in
 
 ### Data Quality Checks
 The initial inspection identified the following:
+
  **• Missing values:** No blank data cells were found in the three main data tables.
  
  **• Duplicate records:** No exact duplicate rows were identified in the initial inspection of the three tables.
@@ -97,8 +98,11 @@ The visual provides a way to examine how costs are distributed among the colour 
 
 ### 4. Revenue Across Time
 The report includes two revenue-related time visuals:
+
  • A combination chart using the year level of the sales date hierarchy.
+ 
  • A line chart using the month level of the sales date hierarchy.
+ 
 These visuals are intended to support the exploration of revenue over time. The source sales records contain three distinct dates in January, February, and March 2023.
 
 ### 5. Profit by Customer Income Level
@@ -116,6 +120,7 @@ These controls allow users to explore the report from different business perspec
 
 ## Key Insights and Findings
 The following findings were calculated from the data’s sales records. They are source-data summaries and should be distinguished from the exact values displayed by the Power BI measures.
+
 **1. Overall Sales:** The data contains 5,200 sales records with a combined SalesAmount of **1,034,150** in the dataset’s recorded monetary units.
 
  **2. Brand Performance:** Apple has the highest aggregated sales amount of **217,500**, while Dell has the lowest sales amount of **139,500** among the six brands.
@@ -131,6 +136,7 @@ These figures represent sales amount, not the profit-by-brand values shown in th
 
 ## Recommendations 
 Based on the source-data findings and the report’s analytical focus, the following actions are recommended:
+
  **1. Investigate brand performance:** Examine the profit-by-brand visual to identify brands that contribute the most profit, rather than relying on sales amount alone.
  
  **2. Review product performance:** Investigate the sales and cost patterns of headphones, monitors, and tablets to understand their contribution to overall business results.
