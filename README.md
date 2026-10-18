@@ -124,6 +124,8 @@ The dashboard includes two slicers:
  
 These controls allow users to explore the report from different business perspectives without creating separate reports for each selection.
 
+![image alt](https://github.com/barakatokunlola/Tech-Sales-Analysis/blob/d8a777ea76eb67959798e2a593732c43d51aa181/Dashboard.PNG)
+Dashboard
 
 ## Key Insights and Findings
 The following findings were calculated from the data’s sales records. They are source-data summaries and should be distinguished from the exact values displayed by the Power BI measures.
