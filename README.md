@@ -113,6 +113,7 @@ This helps users explore how profit is distributed across the income categories 
 The dashboard includes two slicers:
 
  • Region: Filters the report by customer region.
+ 
  • Product: Filters the report by product name.
  
 These controls allow users to explore the report from different business perspectives without creating separate reports for each selection.
