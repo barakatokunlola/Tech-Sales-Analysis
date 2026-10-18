@@ -73,6 +73,7 @@ Power Query provides the environment for preparing the source data before analys
  6. Preparing the tables for relationships and analysis in Power BI.
 These checks help ensure that customer regions, gender categories, and dates can be analysed consistently.
 
+https://github.com/barakatokunlola/Tech-Sales-Analysis/blob/be81b628e2371d128086225ac2ee423d1ae24a37/merged-image.png
 
 ## Data Analysis
 The Power BI report contains KPI cards, charts, and interactive slicers that support exploration of the available sales data.
