@@ -1,268 +1,145 @@
 # 📊 Tech Sales Analysis Dashboard
 
-## 1. Introduction
+## Introduction
 
-The Tech Sales Analysis project focuses on analyzing sales performance to uncover 
-meaningful insights into revenue generation, profitability, product performance, 
-and customer purchasing patterns.
+This project explores technology sales data using Microsoft Power BI to examine revenue, costs, profit, product performance, and customer characteristics. The report brings together sales, product, and customer information in an interactive dashboard. It uses KPI cards, charts, and slicers to help users explore business performance across product brands, colours, customer income levels, regions, and sales dates.
 
-Using Power BI, I developed an interactive sales dashboard that transforms sales 
-data into visual insights to support business monitoring and informed decision-making.
+The project demonstrates the use of Power Query for data preparation, data modelling, DAX measures, and Power BI visualisations to transform raw data into a business reporting tool.
 
-The dashboard explores key performance indicators, including total revenue, total 
-profit, total cost, and customer metrics. It also examines sales trends over time, 
-profit contribution by brand, costs by product color, and customer income levels.
+## Problem Statement
 
-The goal of this project is to demonstrate how data analytics can help businesses 
-understand their sales performance, identify opportunities for improvement, and 
-make data-driven decisions.
+Businesses need a clear understanding of their sales performance to identify strong-performing products, monitor costs, evaluate profitability, and understand customer purchasing patterns. However, raw sales records alone can make it difficult to compare performance across different product and customer categories.
 
-## 2. Problem Statement
+This project addresses that challenge by developing an interactive Power BI report that consolidates sales, product, and customer data into a single view for business performance analysis.
 
-Businesses need a clear understanding of their sales performance to remain 
-competitive, maintain profitability, and meet customer needs.
+## Business Questions
+The analysis focuses on the following questions:
+ 1. What is the total revenue generated from technology sales?
+ 2. What are the total costs and overall profit?
+ 3. Which product brands contribute the most to sales profit?
+ 4. How does total cost vary across product colours?
+ 5. How does profit differ across customer income levels?
+ 6. How does revenue change across the available sales dates and months?
+ 7. How do sales and profit vary across customer regions?
+ 8. How can users explore performance for individual product categories and customer regions?
 
-However, when sales information is not effectively analyzed, it can be difficult 
-to determine which brands contribute the most to profit, how revenue changes over 
-time, how costs vary across product categories, and how customer segments contribute 
-to business performance.
+## Data Source
+The project uses an Excel workbook containing the following tables:
 
-Without these insights, management may struggle to identify profitable products, 
-monitor financial performance, and develop effective sales strategies.
+**Sales:** 5,200 rows and 7 columns containing sale ID, product ID, customer ID, quantity, sale date, sales amount, and unit cost
 
-This project addresses these challenges by using Power BI to analyze sales, product, 
-and customer data through an interactive dashboard.
+**Products:** 250 rows and 6 columns containing product ID, product name, category, brand, colour, and weight
 
-## 3. Business Questions
+**Customers:** 250 rows and 7 columns containing customer ID, name, region, age, gender, income level, and signup date
 
-The analysis seeks to answer the following business questions:
+The sales, products, and customers tables provide the information required to analyse transactions alongside product attributes and customer characteristics.
 
-1. What are the total revenue, total profit, and total cost of the business?
 
-2. How does revenue change over time?
+## Tools Used
+ **• Microsoft Power BI Desktop:** Report development, data modelling, interactive visualisations, and dashboard design.
+ 
+ **• Power Query:** Data import, inspection, cleaning, and preparation.
 
-3. What are the monthly sales revenue trends?
+ **• DAX (Data Analysis Expressions):** Creation of measures used to calculate and display business performance indicators.
 
-4. Which product brands contribute the most to total profit?
+ **• Microsoft Excel:** Source data storage and initial inspection.
 
-5. How do total costs vary across product colors?
 
-6. How does profitability differ across customer income levels?
+## Data Cleaning and Preparation
+Data preparation is an important part of this project because inconsistencies in the source data can affect calculations, relationships, and visualisations. The data was inspected table by table, with attention to missing values, duplicate records, inconsistent text formatting, data types, and relationships between tables.
 
-7. How many customers are represented in the dataset?
+### Data Quality Checks
+The initial inspection identified the following:
+ **• Missing values:** No blank data cells were found in the three main data tables.
+ 
+ **• Duplicate records:** No exact duplicate rows were identified in the initial inspection of the three tables.
 
-8. Which regions contribute to the business's sales performance?
+ **• Region inconsistencies:** The customer table contains both North and north, indicating inconsistent capitalisation and extra whitespace.
 
-9. How can sales and customer data support better business decisions?
+ **• Gender inconsistencies:** The customer table contains both Female and female, which should be standardised for consistent reporting.
 
-## 4. Data Source
+ **• Date formatting:** The sales table contains dates represented in both YYYY-MM-DD and YYYY/MM/DD formats. The customer signup dates also use mixed date formats.
 
-The project uses a structured sales dataset containing information about sales 
-transactions, products, and customers.
+ **• Relationship checks:** The product IDs and customer IDs in the sales table were checked against their corresponding lookup tables. No unmatched IDs were identified in the initial inspection.
 
-The Power BI data model contains three main tables:
+### Power Query Preparation
+Power Query provides the environment for preparing the source data before analysis. The relevant preparation tasks for this dataset include:
+ 1. Importing the sales, products, and customers tables from the Excel workbook.
+ 2. Checking column names and assigning appropriate data types.
+ 3. Standardising text values by removing unnecessary whitespace and correcting inconsistent capitalisation.
+ 4. Converting sales dates and customer signup dates into consistent date values.
+ 5. Checking for missing values, duplicate records, and invalid identifiers.
+ 6. Preparing the tables for relationships and analysis in Power BI.
+These checks help ensure that customer regions, gender categories, and dates can be analysed consistently.
 
-### Sales Table
-Contains sales-related information used to evaluate financial performance, 
-including revenue, profit, total cost, and sale dates.
 
-### Products Table
-Contains product-related attributes, including product names, brands, and colors. 
-These fields support product-level performance analysis.
+## Data Analysis
+The Power BI report contains KPI cards, charts, and interactive slicers that support exploration of the available sales data.
+### 1. Key Performance Indicators
+The dashboard displays four main performance indicators:
+ **• Total Revenue:** Measures sales revenue across the selected data.
+ **• Total Cost:** Summarises the costs represented by the source data and the report’s measure.
+ **• Profit:** Presents the profit measure used in the report.
+ **• Total Customers:** Displays the customer count.
+These indicators provide a high-level overview of business performance.
 
-### Customers Table
-Contains customer-related attributes, including customer regions and income levels. 
-These fields support customer segmentation and regional analysis.
-
-The three tables provide the foundation for analyzing relationships between sales 
-transactions, product characteristics, and customer attributes.
-
-*Note: The original dataset's publisher and download URL should be added here 
-if they are available.*
-
-## 5. Tools Used
-
-The following tools and technologies were used or are relevant to the project:
-
-- Microsoft Power BI: Data modeling, DAX calculations, interactive visualizations, 
-  and dashboard development.
-- Power Query: Data cleaning and transformation, where applicable.
-- DAX (Data Analysis Expressions): Calculation of key performance indicators 
-  and business metrics, where applicable.
-- GitHub: Project documentation, version control, and portfolio presentation.
-
-## 6. Data Cleaning and Preparation
-
-Data preparation is an important step in ensuring that the analysis produces 
-meaningful and reliable results.
-
-The preparation process focuses on the following areas:
-
-- Reviewing the Sales, Products, and Customers tables to understand their structure.
-- Examining column names and data types to ensure that fields are suitable for analysis.
-- Checking for missing values in important fields.
-[10/17/2026 3:54 PM] Dyra: - Identifying duplicate records where applicable.
-- Verifying that revenue, profit, and cost fields use appropriate numerical data types.
-- Ensuring that sale dates are recognized as date values.
-- Reviewing relationships between the tables to support accurate cross-table analysis.
-- Checking that customer, product, and sales records can be analyzed consistently.
-- Preparing the data model for use in Power BI visualizations and calculations.
-
-These steps help improve data quality and support more reliable business reporting.
-
-*The specific cleaning operations should reflect the transformations actually 
-performed on the dataset.*
-
-## 7. Data Analysis
-
-The analysis was conducted using Power BI to explore sales performance from 
-financial, product, customer, and time-based perspectives.
-
-### A. Financial Performance
-
-Key performance indicators provide an overview of the business's financial position.
-
-Metrics include:
-
-- Total Revenue
-- Total Profit
-- Total Cost
-- Total Customers
-
-These indicators provide a high-level summary of business performance and help 
-users monitor important sales metrics.
-
-### B. Brand Profitability Analysis
-
+### 2. Profit by Brand
 A clustered column chart compares profit across product brands.
+This visual helps users identify brands contributing more or less profit and compare performance across the six brands represented in the source data: Apple, Samsung, Lenovo, HP, Asus, and Dell.
 
-This analysis helps identify brands that contribute strongly to overall profitability 
-and those that may require further investigation.
+### 3. Total Cost by Product Colour
+A clustered bar chart compares total cost across product colours.
+The visual provides a way to examine how costs are distributed among the colour categories in the product data.
 
-### C. Product Cost Analysis
+### 4. Revenue Across Time
+The report includes two revenue-related time visuals:
+ • A combination chart using the year level of the sales date hierarchy.
+ • A line chart using the month level of the sales date hierarchy.
+These visuals are intended to support the exploration of revenue over time. The source sales records contain three distinct dates in January, February, and March 2023.
 
-A clustered bar chart examines total cost across product colors.
+### 5. Profit by Customer Income Level
+A pie chart compares profit across customer income levels: Low, Medium, and High.
+This helps users explore how profit is distributed across the income categories recorded in the customer table.
 
-This view supports comparisons of cost distribution across the product categories 
-represented by color.
+### 6. Interactive Filtering
+The dashboard includes two slicers:
+ • Region: Filters the report by customer region.
+ • Product: Filters the report by product name.
+These controls allow users to explore the report from different business perspectives without creating separate reports for each selection.
 
-### D. Revenue Trends Over Time
 
-Time-based visualizations examine revenue across years and months.
+## Key Insights and Findings
+The following findings were calculated from the data’s sales records. They are source-data summaries and should be distinguished from the exact values displayed by the Power BI measures.
+**1. Overall Sales:** The data contains 5,200 sales records with a combined SalesAmount of **1,034,150** in the dataset’s recorded monetary units.
 
-The yearly analysis helps identify changes in revenue over longer periods, while 
-the monthly analysis provides a closer view of shorter-term trends and fluctuations.
+ **2. Brand Performance:** Apple has the highest aggregated sales amount of **217,500**, while Dell has the lowest sales amount of **139,500** among the six brands.
+These figures represent sales amount, not the profit-by-brand values shown in the dashboard.
 
-### E. Customer Segmentation
+**3. Product Performance:** Headphones recorded the highest aggregated sales amount of **182,800**, followed by monitors **(181,200)** and tablets **(171,900)**. Phones recorded the lowest sales of **118,350**.
 
-A pie chart examines profit distribution across customer income levels.
+**4. Customer Income Levels:** Customers in the Medium income category account for the highest aggregated sales amount of **381,950** while Low income category account for the lowest sales amount of **316,600**.
 
-This analysis provides a view of how different income segments contribute to 
-profitability and can support further customer segmentation.
+**5. Regional Sales:** North has the highest sales amount of **323,900** among the region labels. West is being recorded as the lowest sales amount of **215,250**. 
 
-### F. Regional Analysis
+**6. Sales Dates:** These are comparisons between three distinct dates; 1 January 2023, 10 March 2023, and 15 February 2023 not a complete month-by-month sales trend. Among these dates, 10 March 2023 has the highest aggregated sales amount of **346,000**, while 15 February 2023 has the lowest sales amount of **343,500**.
 
-An interactive regional slicer allows users to filter the dashboard by customer 
-region.
+## Recommendations 
+Based on the source-data findings and the report’s analytical focus, the following actions are recommended:
+ **1. Investigate brand performance:** Examine the profit-by-brand visual to identify brands that contribute the most profit, rather than relying on sales amount alone.
+ 
+ **2. Review product performance:** Investigate the sales and cost patterns of headphones, monitors, and tablets to understand their contribution to overall business results.
+ 
+ **3. Standardise customer data:** Correct inconsistent region labels and gender values before producing final customer segment comparisons.
+ 
+ **4. Standardise date fields:** Convert sales and signup dates into proper date data types to support reliable time-based analysis.
 
-This feature supports comparisons between regions and enables more focused 
-investigation of regional sales performance.
+ **5. Monitor costs and profitability:** Compare the Total Revenue, Total Cost, and Profit indicators to assess financial performance.
 
-### G. Product-Level Filtering
+ **6. Explore regional differences:** Use the region slicer to compare performance across customer locations after standardising the region labels.
 
-A product slicer allows users to select specific products and examine the 
-corresponding performance metrics and visualizations.
+ **7. Use the dashboard for further investigation:** Apply the product slicer to examine how selecting individual products affects the report’s performance indicators and charts.
 
-## 8. Key Insights
+## Conclusion
+The Tech Sales Analysis project demonstrates how Excel data can be prepared and analysed in Power BI to support business reporting. By combining sales transactions with product and customer information, the report provides a consolidated view of revenue, cost, profit, brand performance, and customer income segments. Its KPI cards, charts, and slicers allow users to explore different aspects of the data interactively.
 
-The dashboard is designed to help uncover the following insights:
-
-- Overall business performance: Understand the relationship between revenue, 
-  profit, and cost.
-
-- Brand profitability: Identify brands with relatively high or low profit 
-  contributions.
-
-- Product cost patterns: Compare costs across the product categories represented 
-  by color.
-
-- Revenue trends: Examine changes in revenue across years and months to identify 
-  potential growth patterns or periods of decline.
-
-- Customer profitability: Explore how customer income levels relate to profit 
-  contribution.
-
-- Regional performance: Compare business performance across customer regions.
-
-- Product performance: Use interactive filtering to investigate individual 
-  products and their contribution to business results.
-
-The actual values, rankings, and trends should be documented after validating 
-the dashboard results against the underlying data.
-
-## 9. Recommendations
-
-Based on the business questions addressed by the dashboard, the following 
-recommendations can guide further investigation and decision-making:
-
-### 1. Strengthen Brand-Level Sales Strategies
-Identify brands with strong profit contributions and investigate the factors 
-behind their performance. Use these findings to inform product promotion and 
-inventory decisions.
-
-### 2. Monitor Profitability Alongside Revenue
-Revenue growth does not necessarily translate into higher profit. Management 
-should monitor revenue, costs, and profit together when evaluating business 
-performance.
-
-### 3. Investigate Cost Variations
-[10/17/2026 3:54 PM] Dyra: Examine product categories with relatively high costs to determine whether the 
-differences arise from pricing, production, procurement, or other operational factors.
-
-### 4. Use Revenue Trends for Planning
-Review monthly and yearly revenue patterns to support sales forecasting, inventory 
-planning, and promotional scheduling.
-
-### 5. Develop Customer-Specific Strategies
-Use customer segmentation to investigate purchasing behavior and profitability 
-across income levels. Tailor marketing strategies to segments supported by the data.
-
-### 6. Evaluate Regional Opportunities
-Compare regional performance to identify areas with growth potential and regions 
-that may require additional marketing or sales support.
-
-### 7. Establish Regular Performance Monitoring
-Use the dashboard to monitor key performance indicators regularly and identify 
-changes that require further investigation.
-
-These recommendations should be prioritized and refined using the actual findings 
-from the dataset.
-
-## 10. Conclusion
-
-The Tech Sales Analysis project demonstrates how Power BI can be used to transform 
-structured sales, product, and customer data into an interactive business intelligence 
-dashboard.
-
-By examining financial performance, brand profitability, product costs, revenue 
-trends, customer income levels, and regional performance, the dashboard provides 
-a framework for understanding business operations from multiple perspectives.
-
-The project also highlights the importance of data preparation, effective 
-visualization, and business-focused analysis in translating raw data into useful 
-information.
-
-Through this project, I strengthened my practical understanding of Power BI 
-and demonstrated how data analytics can support performance monitoring, identify 
-areas for further investigation, and inform business decisions.
-
----
-
-## Author
-
-Dyra | Data Analyst
-
-Interested in using data analytics to uncover patterns, solve business problems, 
-and support informed decision-making.
-
-Tools: Microsoft Power BI | DAX | Power Query | GitHub
+The project also highlights the importance of data quality. Inconsistent text values and date formats need to be addressed to ensure reliable analysis and reporting. Overall, this project demonstrates practical skills in data inspection, Power Query preparation, data modelling, DAX-based reporting, and Power BI dashboard development.
