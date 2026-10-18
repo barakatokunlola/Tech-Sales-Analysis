@@ -63,6 +63,9 @@ The initial inspection identified the following:
 
  **• Relationship checks:** The product IDs and customer IDs in the sales table were checked against their corresponding lookup tables. No unmatched IDs were identified in the initial inspection.
 
+ ![image alt](https://github.com/barakatokunlola/Tech-Sales-Analysis/blob/2e0e4335602a05deb75565f622c04a37b5387771/Modelling.PNG)
+ Relationship view
+
 ### Power Query Preparation
 Power Query provides the environment for preparing the source data before analysis. The relevant preparation tasks for this dataset include:
  1. Importing the sales, products, and customers tables from the Excel workbook.
@@ -74,6 +77,8 @@ Power Query provides the environment for preparing the source data before analys
 These checks help ensure that customer regions, gender categories, and dates can be analysed consistently.
 
 ![image alt](https://github.com/barakatokunlola/Tech-Sales-Analysis/blob/be81b628e2371d128086225ac2ee423d1ae24a37/merged-image.png)
+Power Query
+
 
 ## Data Analysis
 The Power BI report contains KPI cards, charts, and interactive slicers that support exploration of the available sales data.
